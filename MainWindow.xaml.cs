@@ -15,7 +15,6 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using org.mariuszgromada.math.mxparser;
 
-
 namespace MathParser
 {
     /// <summary>
@@ -46,7 +45,7 @@ namespace MathParser
                 //string value = new DataTable().Compute(textLabel.Text, null).ToString();
                 //textLabel.Text = value;
                 org.mariuszgromada.math.mxparser.Expression ex = new org.mariuszgromada.math.mxparser.Expression(textLabel.Text);
-                textLabel.Text = ex.calculate().ToString();
+                textLabel.Text = ex.calculate().ToString().Replace(",", ".");
             }
             else
                 textLabel.Text += str;
